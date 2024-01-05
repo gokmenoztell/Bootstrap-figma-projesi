@@ -4,39 +4,719 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap figma project</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <!--FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600&family=Montserrat:wght@800&family=Open+Sans:wght@300;600&display=swap"
+        rel="stylesheet">
+    <!--FONT-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+
+    <style>
+        .banner-image {
+            background-image: url('https://s3-alpha-sig.figma.com/img/cc1e/1afc/fad6c16a7c493086bb877d313b105ba4?Expires=1704672000&Signature=lM5uRtwpTYx177NbOiN9s0FTopeQZVaKilOwd1hA2~211hX-TjbP17sjeJWgvE1brHVw0LiW1QQK3Q75V2oa4ahp1ji0botjc-ZkV-OgqYSGEr6TV8FY5-SiO6E2gRtMe2SQUgAvwTY~IK8rE58q0j6J0nAJESANQHbSuZYKzGJ7ndGFABoNnDJ6WH7i6mdsy98L4N~Wo7yEWrinS1WJkMhqU0LJ4hKTWNz74BfB9Q6r0n~p19l2OzNlnsS-CDFDA~pzH9DPCYUVmgzVTGIJMLKj17c7t07X5LV~qajk5R2Nyd0viqga~th5U4IW5jY3UPeMLZVBu0UwSVTc-N90Zw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .content {
+            text-align: -webkit-center;
+            z-index: 999
+        }
+
+        .drk:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: black;
+            opacity: 0.6;
+        }
+
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        .swiper {
+            width: 70%;
+            height: 30%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 45%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .swiper {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">BrandName</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="#">Features</a>
-              <a class="nav-link" href="#">Pricing</a>
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    <!-- Navbar  -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/BrandName.svg" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse ms-5 ps-5 justify-content-between" id="navbarNav">
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <div class="">
+                    <a class="text-decoration-none text-light me-5 pe-2 " href="">Login</a>
+                    <a class="primarybutton btn pt-2 pb-2 ps-4 pe-4 text-white align-items-center hover rounded-2"
+                        href="">Become a member <img class="ps-2" src="assets/img/icn arrow-right .icn-xs.svg" alt=""></a>
+                </div>
             </div>
-          </div>
         </div>
-      </nav>
+    </nav>
+    <!-- Banner Image  -->
+    <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center drk center">
+        <div class="content pt-2 mt-3 pb-2 mb-3">
+            <h1 class="text-white w-50 fs-1" style=" font-family: Montserrat;">We Ensure A Best Insurance Service</h1>
+            <p class="paragraph text-white w-50 fs-3 mt-5 mb-5">We know how large objects will act, but things on a
+                small scale just do not act that way.</p>
+            <div class="button">
+                <a class="primarybutton btn rounded-pill pt-2 pb-2 ps-4 pe-4 text-white align-items-center hover"
+                    href="">Get
+                    Quote Now</a>
+                <a class="btn bg-transparent rounded-pill border-white text-white pt-2 pb-2 ps-4 pe-4 ms-3"
+                    href="">Learn More</a>
+            </div>
+
+        </div>
+    </div>
+    <section class="cardContent" style=" margin-top: -7rem;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg">
+                    <div class="card rounded-0 shadow-lg border-0 pt-4 mt-2 pb-4 mb-2 pe-5 ps-5">
+                        <div class="card-body">
+                            <img src="assets/img/icn resize icn-mdwhite.svg" class="imgg card-img-top" alt="...">
+                            <h5 class="card-title fs-3 mb-2 mt-2">Peace of Mind</h5>
+                            <p class="card-text w-50">the quick fox jumps over the lazy dog</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg">
+                    <div class="card rounded-0 shadow-lg border-0 pt-4 mt-2 pb-4 mb-2 pe-5 ps-5">
+                        <div class="card-body">
+                            <img src="assets/img/icn resize icn-mdwhite.svg" class="imgg card-img-top" alt="...">
+                            <h5 class="card-title fs-3 mb-2 mt-2">Set For Life</h5>
+                            <p class="card-text w-50">the quick fox jumps over the lazy dog</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg">
+                    <div class="cd card rounded-0 shadow-lg border-0 pt-4 mt-2 pb-4 mb-2 pe-5 ps-5"
+                        style=" background-color: var(--blue);">
+                        <div class="card-body">
+                            <img src="assets/img/icn resize icn-md.svg" class="imgg card-img-top" alt="...">
+                            <h5 class="card-title fs-3 text-white mb-2 mt-2">100% Satisfaction</h5>
+                            <p class="card-text w-50 text-white">the quick fox jumps over the lazy dog</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
 
+    <section class="mt-5 pt-5 mb-5 pb-5">
+        <div class="container mt-5 pt-5 mb-5 pb-5">
+            <div class="row">
+                <div class="col-lg">
+                    <div class="card border border-0">
+                        <div class="card-body d-flex flex-column align-items-center pt-4 pb-4 mt-3 mb-3 ps-5 pe-5">
+                            <img src="assets/img/icn resize icn-xl.svg" class="card-img-top w-25 pb-4" alt="...">
+                            <h5 class="card-title">Peace of Mind</h5>
+                            <p class="wd card-text text-center w-50">So it really behaves like neither.
+                                Now we have given up. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg">
+                    <div class="card border border-0">
+                        <div class="card-body d-flex flex-column align-items-center pt-4 pb-4 mt-3 mb-3 ps-5 pe-5">
+                            <img src="assets/img/icn resize .icn-xl.svg" class="card-img-top w-25 pb-4" alt="...">
+                            <h5 class="card-title">Set For Life</h5>
+                            <p class="wd card-text text-center w-50">They were used to create the machines that launched
+                            </p>
 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg">
+                    <div class="card border border-0">
+                        <div class="card-body d-flex flex-column align-items-center pt-4 pb-4 mt-3 mb-3 ps-5 pe-5">
+                            <img src="assets/img/icn resize icn-mdwhite.svg" class="card-img-top w-25 pb-4" alt="...">
+                            <h5 class="card-title">100% Satisfaction</h5>
+                            <p class="wd card-text text-center w-50">So it really behaves like neither.
+                                Now we have given up. </p>
+                        </div>
+                    </div>
+                </div>
 
+            </div>
+        </div>
+    </section>
+    <section class="mt-5 pt-5 mb-5 pb-5">
+        <div class="text-body d-flex flex-column align-items-center text-center">
+            <h1>Industry</h1>
+            <p class="w-25">Problems trying to resolve the conflict between
+                the two major realms of Classical physics: Newtonian mechanics </p>
+        </div>
+        <!-- <div class="owl-carousel owl-theme">
+       
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        </div> -->
+        <div class="container mt-5 pt-5 mb-5 pb-5 justify-content-center">
+            <div class="row owl-carousel owl-theme">
+                <div class=" item">
+                    <div class="card ms-5 me-5 mb-5">
+                        <div
+                            class="card-body d-flex flex-column align-items-center pt-4 mt-3 pb-4 mb-3 me-3 pe-3 ms-3 ps-3">
+                            <img src="assets/img/user.1.png" class="card-img-top w-50 pb-4" alt="...">
+                            <p class="paragraph-2 card-text text-center w-100">Slate helps you see how
+                                many more days you need
+                                to work to reach your financial
+                                goal for the month and year.</p>
+                            <div class="card-img d-flex justify-content-center w-25">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bx-star.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" item">
+                    <div class="card ms-5 me-5 mb-5">
+                        <div
+                            class="card-body d-flex flex-column align-items-center pt-4 mt-3 pb-4 mb-3 me-3 pe-3 ms-3 ps-3">
+                            <img src="assets/img/user.2.png" class="card-img-top w-50 pb-4" alt="...">
+                            <p class="paragraph-2 card-text text-center w-100">Slate helps you see how
+                                many more days you need
+                                to work to reach your financial
+                                goal for the month and year.</p>
+                            <div class="card-img d-flex justify-content-center w-25">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bx-star.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" item">
+                    <div class="card ms-5 me-5">
+                        <div
+                            class="card-body d-flex flex-column align-items-center pt-4 mt-3 pb-4 mb-3 me-3 pe-3 ms-3 ps-3">
+                            <img src="assets/img/user.3.svg" class="card-img-top w-50 pb-4" alt="...">
+                            <p class="paragraph-2 card-text text-center w-100">Slate helps you see how
+                                many more days you need
+                                to work to reach your financial
+                                goal for the month and year.</p>
+                            <div class="card-img d-flex justify-content-center w-25">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bx-star.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" item">
+                    <div class="card ms-5 me-5 mb-5">
+                        <div
+                            class="card-body d-flex flex-column align-items-center pt-4 mt-3 pb-4 mb-3 me-3 pe-3 ms-3 ps-3">
+                            <img src="assets/img/user.1.png" class="card-img-top w-50 pb-4" alt="...">
+                            <p class="paragraph-2 card-text text-center w-100">Slate helps you see how
+                                many more days you need
+                                to work to reach your financial
+                                goal for the month and year.</p>
+                            <div class="card-img d-flex justify-content-center w-25">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bx-star.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" item">
+                    <div class="card ms-5 me-5 mb-5">
+                        <div
+                            class="card-body d-flex flex-column align-items-center pt-4 mt-3 pb-4 mb-3 me-3 pe-3 ms-3 ps-3">
+                            <img src="assets/img/user.2.png" class="card-img-top w-50 pb-4" alt="...">
+                            <p class="paragraph-2 card-text text-center w-100">Slate helps you see how
+                                many more days you need
+                                to work to reach your financial
+                                goal for the month and year.</p>
+                            <div class="card-img d-flex justify-content-center w-25">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bx-star.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" item">
+                    <div class="card ms-5 me-5">
+                        <div
+                            class="card-body d-flex flex-column align-items-center pt-4 mt-3 pb-4 mb-3 me-3 pe-3 ms-3 ps-3">
+                            <img src="assets/img/user.3.svg" class="card-img-top w-50 pb-4" alt="...">
+                            <p class="paragraph-2 card-text text-center w-100">Slate helps you see how
+                                many more days you need
+                                to work to reach your financial
+                                goal for the month and year.</p>
+                            <div class="card-img d-flex justify-content-center w-25">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bxs-star.svg" alt="">
+                                <img src="assets/img/icn bx-star.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper" navigation="false">
+            <div class="swiper-slide">
+                <img src="assets/img/fa-brands_hooli.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/img/fa-brands_lyft.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/img/fa-brands_pied-piper-hat.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/img/fa-brands_stripe.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/img/fa-brands_aws.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/img/fa-brands_reddit-alien.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/img/fa-brands_aws.svg" alt="">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <section class="mb-5 pb-5 mt-5 pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="d-flex text-white rounded-1 pt-4 pb-4 pe-5 ps-5"
+                    style="background: var(--background-gradient-1, linear-gradient(270deg, #D71489 -1.04%, #004788 100%));">
+                    <div class="col-lg-6 col-md-12 w-50">
+                        <h2 class="w-50 fs-2">Subscribe For Latest
+                            Newsletter</h2>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 w-50">
+                        <div class="input-group mb-4 mt-4" style="height: 3rem;">
+                            <input type="text" class="form-control" placeholder="Your Email"
+                                aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn text-white" style=" background-color: var(--blue)" type="button"
+                                id="button-addon2">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5 pt-5 mb-5 pb-5">
+        <div class="container-lg">
+            <div class="row">
+                <div class="text-body d-flex flex-column align-items-center mb-5">
+                    <h1>Pricing</h1>
+                    <p class="paragraph-2">Problems trying to resolve the conflict between
+                        the two major realms of Classical physics: Newtonian mechanics </p>
+                </div>
+                <div class="col ">
+                    <div class="card border border-info mt-5" style="height: 40rem;">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <h5 class="card-title pb-4" style="font-family: Montserrat; color: #252B42;">FREE</h5>
+                            <p class="card-text w-50 text-center" style="  color: var(--dark);">Organize across all apps
+                                by hand</p>
+                            <div class="d-flex pt-4">
+                                <p class="fs-2 pt-2" style="font-family: Montserrat; color: var(--blue);">0</p>
+                                <div class="d-flex flex-column ms-4">
+                                    <p class="mb-0" style="font-family: Montserrat; color: var(--blue);">$</p>
+                                    <p class="" style=" color: var(--blue);">Per Month</p>
+                                </div>
+                            </div>
+                            <div class="center pt-3">
+                                <div class="d-flex">
+                                    <img class="custom me-2 mb-3" src="assets/img/check .icn-xs.svg" alt="">
+                                    <p>Unlimited product updates</p>
+                                </div>
+                                <div class="d-flex">
+                                    <img class="custom me-2 mb-3" src="assets/img/check .icn-xs.svg" alt="">
+                                    <p>Unlimited product updates</p>
+                                </div>
+                                <div class="d-flex">
+                                    <img class="custom me-2 mb-3" src="assets/img/check .icn-xs.svg" alt="">
+                                    <p>Unlimited product updates</p>
+                                </div>
+                                <div class="d-flex">
+                                    <img class="custom-2 me-2 mb-3" src="assets/img/ccheck .icn-xs.svg" alt="">
+                                    <p>1GB Cloud storage</p>
+                                </div>
+                                <div class="d-flex">
+                                    <img class="custom-2 me-2 mb-3" src="assets/img/ccheck .icn-xs.svg" alt="">
+                                    <p>Email and community
+                                        support
+                                    </p>
+                                </div>
+
+                            </div>
+                            <button type="button"
+                                class="btn btn-info d-flex flex-colum align-items-center pt-3 pb-3 pe-4 me-3 ps-4 ms-3 justify-content-center text-light mt-5"
+                                style="width: 246px;
+                                ">Try for free</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border border-info " style="height: 43rem;">
+                        <div class="card-body d-flex flex-column align-items-center rounded-2"
+                            style=" background: var(--text-color, #252B42);">
+                            <h5 class="card-title pb-4 pt-5 text-white">STANDART</h5>
+                            <p class="card-text w-50 text-center text-white">Organize across all apps by hand</p>
+                            <div class="d-flex pt-4">
+                                <p class="fs-2 pt-2" style="font-family: Montserrat; color: var(--blue);">9.99</p>
+                                <div class="d-flex flex-column ms-4">
+                                    <p class="mb-0" style="font-family: Montserrat; color: var(--blue);">$</p>
+                                    <p class="" style=" color: var(--blue);">Per Month</p>
+                                </div>
+                            </div>
+                            <div class="center pt-3">
+                                <div class="d-flex">
+                                    <img class="custom me-2 mb-3" src="assets/img/check .icn-xs.svg" alt="">
+                                    <p class="text-white">Unlimited product updates</p>
+                                </div>
+                                <div class="d-flex">
+                                    <img class="custom me-2 mb-3" src="assets/img/check .icn-xs.svg" alt="">
+                                    <p class="text-white">Unlimited product updates</p>
+                                </div>
+                                <div class="d-flex">
+                                    <img class="custom me-2 mb-3" src="assets/img/check .icn-xs.svg" alt="">
+                                    <p class="text-white">Unlimited product updates</p>
+                                </div>
+                                <div class="d-flex">
+                                    <img class="custom-2 me-2 mb-3" src="assets/img/ccheck .icn-xs.svg" alt="">
+                                    <p class="text-white">1GB Cloud storage</p>
+                                </div>
+                                <div class="d-flex">
+                                    <img class="custom-2 me-2 mb-3" src="assets/img/ccheck .icn-xs.svg" alt="">
+                                    <p class="text-white">Email and community
+                                        support
+                                    </p>
+                                </div>
+
+                            </div>
+                            <button type="button"
+                                class="btn btn-info d-flex flex-colum align-items-center pt-3 pb-3 pe-4 me-3 ps-4 ms-3 justify-content-center text-light mt-4"
+                                style="width: 246px;
+                                ">Try for free</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border border-info mt-5" style="height: 40rem;">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <h5 class="card-title pb-4" style="font-family: Montserrat; color: #252B42;">PREMİUM</h5>
+                            <p class="card-text w-50 text-center" style="  color: var(--dark);">Organize across all apps
+                                by hand</p>
+                            <div class="d-flex pt-4">
+                                <p class="fs-2 pt-2" style="font-family: Montserrat; color: var(--blue);">19.99</p>
+                                <div class="d-flex flex-column ms-4">
+                                    <p class="mb-0" style="font-family: Montserrat; color: var(--blue);">$</p>
+                                    <p class="" style=" color: var(--blue);">Per Month</p>
+                                </div>
+                            </div>
+                            <div class="center pt-3">
+                                <div class="d-flex">
+                                    <img class="custom me-2 mb-3" src="assets/img/check .icn-xs.svg" alt="">
+                                    <p>Unlimited product updates</p>
+                                </div>
+                                <div class="d-flex">
+                                    <img class="custom me-2 mb-3" src="assets/img/check .icn-xs.svg" alt="">
+                                    <p>Unlimited product updates</p>
+                                </div>
+                                <div class="d-flex">
+                                    <img class="custom me-2 mb-3" src="assets/img/check .icn-xs.svg" alt="">
+                                    <p>Unlimited product updates</p>
+                                </div>
+                                <div class="d-flex">
+                                    <img class="custom-2 me-2 mb-3" src="assets/img/ccheck .icn-xs.svg" alt="">
+                                    <p>1GB Cloud storage</p>
+                                </div>
+                                <div class="d-flex">
+                                    <img class="custom-2 me-2 mb-3" src="assets/img/ccheck .icn-xs.svg" alt="">
+                                    <p>Email and community
+                                        support
+                                    </p>
+                                </div>
+
+                            </div>
+                            <button type="button"
+                                class="btn btn-info d-flex flex-colum align-items-center pt-3 pb-3 pe-4 me-3 ps-4 ms-3 justify-content-center text-light mt-5"
+                                style="width: 246px;
+                                ">Try for free</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cover mt-5 pt-5" style="background-color: #252B42; height: 719.217px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="text-body">
+                        <h1 class="text-white">We Have Branches All
+                            Over The World</h1>
+                        <p class="text-white w-75">The gradual accumulation of information about atomic and
+                            small-scale behaviour during the first quarter of the 20th
+                            century, which gave some indications about how small things
+                            do behave, produced an increasing confusion which was
+                            Heisenberg, and Born.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="img-picture d-flex justify-content-around">
+                        <img src="assets/img/pngwing 1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="margn mb-5 pb-5">
+        <div class="container">
+            <div class="row ms-5 me-5 d-flex justify-content-center">
+                <div class="col-lg-3 col-md-12 bg-white">
+                    <img src="assets/img/contact-cover.2.png" alt="">
+                </div>
+                <div class="col-lg-5 col-md-12 bg-white">
+                    <div class="row">
+                        <div class="text-body text-center">
+                            <h3 class="pt-4 pb-4">Book Appointment</h3>
+                        </div>
+                        <div>
+                            <h6>Name *</h6>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Full Name *"
+                                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <h6>Email Adress *</h6>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="example@gmail.com"
+                                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h6>Departement *</h6>
+                        <div class="input-group mb-3">
+                            <select class="form-select" id="inputGroupSelect03"
+                                aria-label="Example select with button addon">
+                                <option selected>Please select</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h6>Time *</h6>
+                        <div class="input-group mb-3">
+                            <select class="form-select" id="inputGroupSelect03"
+                                aria-label="Example select with button addon">
+                                <option selected>4:00 Available</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <button class="primarybutton btn mt-3 text-white" type="button">Book
+                            Appointment</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5 pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="text-body">
+                        <h4>Consulting Agency For Your Business</h4>
+                        <p>the quick fox jumps over the lazy dog</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <button class="primarybutton btn mt-4 w-50 h-50 text-white "
+                        type="button">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5">
+                <div class="col mb-3">
+                    <h5>Company Info</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About Us</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Carrier</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">We are hiring</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Blog</a></li>
+
+                    </ul>
+                </div>
+                <div class="col mb-3">
+                    <h5>Legal</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About Us</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Carrier</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">We are hiring</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col mb-3">
+                    <h5>Features</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Business Marketing</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">User Analytic</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Live Chat</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Unlimited Support</a></li>
+
+                    </ul>
+                </div>
+                <div class="col mb-3">
+                    <h5>Resources</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">IOS & Android</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Watch a Demo</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Customers</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">API</a></li>
+                    </ul>
+                </div>
+                <div class="col mb-3">
+                    <h5>Get In Touch</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><img
+                                    src="assets/img/bx_bx-phone.svg" alt=""> (480) 555-0103</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><img
+                                    src="assets/img/bx_bx-map.svg" alt=""> 4517 Washington Ave.
+                            </a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><img
+                                    src="assets/img/carbon_send-alt.svg" alt=""> debra.holt@example.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 6,
+            spaceBetween: 0,
+            loop: false,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
+
+    <script src="jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="owl.carousel.js"></script>
 </body>
 
 </html>
