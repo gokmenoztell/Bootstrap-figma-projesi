@@ -62,7 +62,6 @@ align-items: center;border-radius: 200px;
     filter: invert(1);
 }
 
-
 @media (min-width:992px){
   .btn{
     transition: all 0.3s linear;
