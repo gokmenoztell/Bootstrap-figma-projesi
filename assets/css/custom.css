@@ -55,7 +55,9 @@ align-items: center;border-radius: 200px;
 .navbar.fixed .nav-link{ 
     color: #000;
 }
-
+.navbar.fixed a{
+    color: black !important; 
+}
 .navbar.fixed .navbar-brand img{ 
     filter: invert(1);
 }
